@@ -1,0 +1,14 @@
+
+Neo4j Healthcare Analytics RAG tool:
+ - What are the top 5 drugs reported with side effects according to the Neo4j Healthcare Analytics database? Get drugs along with their top 3 side effects.
+ - What are the adverse events associated with Lyrica, according to the Neo4j Healthcare Analytics database? 
+ - How many cases presented adverse events with Lyrica as primary suspect, according to the Neo4j Healthcare Analytics database?
+ - What is the most common age group for people who had adverse events with Lyrica?
+
+FDA Adverse Events API RAG tool:
+ - Which adverse events are associated with Tramadol? 
+ - What are the adverse events associated with Lyrica according to the FDA API?
+
+Grünenthal's Financial Report 23/24 RAG tool:
+ - What is the financial outlook for Grünenthal in 2023?
+ - What are Grünenthal financial report's main insights regarding acquisitions and portfolio expansion?
