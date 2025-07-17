@@ -8,7 +8,10 @@ Neo4j Healthcare Analytics RAG tool:
 FDA Adverse Events API RAG tool:
  - Which adverse events are associated with Tramadol? 
  - What are the adverse events associated with Lyrica according to the FDA API?
+ - What are the most common side effects reported for Tapentadol in the FDA database?
 
 Grünenthal's Financial Report 23/24 RAG tool:
  - What is the financial outlook for Grünenthal in 2023?
  - What are Grünenthal financial report's main insights regarding acquisitions and portfolio expansion?
+ - List the key strategic goals Grünenthal outlined in its financial report
+ - Has Grünenthal made any sustainability commitments according to its financial report?
