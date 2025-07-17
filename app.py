@@ -3,8 +3,10 @@ import asyncio
 from agent import execute_agent
 
 st.set_page_config(page_title="Grünenthal AI Agent", layout="centered")
+
 st.title("🧠 Grünenthal AI Chatbot")
 st.caption("Ask questions about the Neo4j Healthcare Analytics graph database, FDA adverse events, or Grünenthal's financial data according to the 2023 report.")
+
 
 if "history" not in st.session_state:
     st.session_state.history = []

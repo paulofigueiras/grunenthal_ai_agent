@@ -2,4 +2,4 @@
 /.venv
 /str
 /__pycache__
-tools/__pycache__
+/tools/__pycache__

@@ -3,10 +3,20 @@ from langchain_community.graphs import Neo4jGraph
 from langchain.chat_models import init_chat_model
 from langchain.chains import GraphCypherQAChain
 from langchain.prompts import PromptTemplate
+import streamlit as st
 
-NEO4J_URI = os.getenv("NEO4J_URI")
-NEO4J_USER = os.getenv("NEO4J_USER")
-NEO4J_PASSWORD = os.getenv("NEO4J_PASSWORD")
+if os.getenv("NEO4J_URI") is not None:
+    NEO4J_URI = os.getenv("NEO4J_URI")
+else:
+    NEO4J_URI = st.secrets["NEO4J_URI"]
+if os.getenv("NEO4J_USER") is not None:
+    NEO4J_USER = os.getenv("NEO4J_USER")
+else:
+    NEO4J_USER = st.secrets["NEO4J_USER"]
+if os.getenv("NEO4J_PASSWORD") is not None:
+    NEO4J_PASSWORD = os.getenv("NEO4J_PASSWORD")
+else:
+    NEO4J_PASSWORD = st.secrets["NEO4J_PASSWORD"]
 
 '''
 This function queries the Neo4j Healthcare Analytics graph database for medical questions.
@@ -58,12 +68,12 @@ def query_neo4j(query: str) -> str:
      **Question:** {query}          
     ...
     """
-    CYPHER_GENERATION_PROMPT = PromptTemplate(input_variables=["schema", "query"], template=CYPHER_GENERATION_TEMPLATE)
+    CYPHER_GENERATION_PROMPT = PromptTemplate(input_variables=["query"], template=CYPHER_GENERATION_TEMPLATE)
 
     llm = init_chat_model(
         "gemini-2.0-flash", 
         model_provider="google_genai",
-        temperature=0.1,
+        temperature=0.2,
         max_tokens=1024
     )
 
