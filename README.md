@@ -71,7 +71,7 @@ There are some limitations and opther things to consider when using Grünenthal 
  - Although the Agent has the ability to use its own knowledge to enhance tool responses with further information (as per the initial configuration prompt provided), it often does not. This should be investigated further in the future.
  - The Neo4j sandbox database connection will expire in some days' time. If necessary, please reach out to me, so that I can prepare a new database for testing.
  - I'm using Google Gemini, which has a free tier and offers some credit for further paid calls, but please do not treat the Grünenthal AI Chatbot as your personal ChatGPT :P ... Just kidding, have a go on it!
- - The Streamlit UI could be nicer... 
+ - The Streamlit UI could be nicer and the overall code could be cleaner and better organised... 
 
 
 ## Top 10 Test Prompts
