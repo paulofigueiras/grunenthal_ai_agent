@@ -75,10 +75,17 @@ There are some limitations and opther things to consider when using Grünenthal 
 
 
 ## Top 10 Test Prompts
-| Prompt                                                                                                    | Why It’s Useful                                         |
+| Prompt                                                                                                    | Why it is useful                                        |
 |-----------------------------------------------------------------------------------------------------------|---------------------------------------------------------|
 |What are the most common side effects reported for Tapentadol in the FDA database?                         | Tests FDA API integration and data summarization.       |
 |What are the adverse events associated with Lyrica according to the FDA API?                               | Re-validates API + supports multiple drug queries.      |
-| What are the adverse events associated with Lyrica, according to the Neo4j Healthcare Analytics database? | Tests the creation of simple Cypher queries and a result similar to the one of the FDA API |
-|How many cases presented adverse events with Lyrica as primary suspect, according to the Neo4j Healthcare Analytics database? | Tests the creation of multi-relationship Cypher queries |
-| 
+|What are the adverse events associated with Lyrica, according to the Neo4j Healthcare Analytics database? | Tests the creation of simple Cypher queries and a result similar to the one of the FDA API. |
+|How many cases presented adverse events with Lyrica as primary suspect, according to the Neo4j Healthcare Analytics database? | Tests the creation of multi-relationship Cypher queries. |
+|What is the most common age group for people who had adverse events with Lyrica? |Tests the ability of the agent to select the neo4j tool when it could go for the FDA API. |
+|What are the top 5 drugs reported with side effects according to the Neo4j Healthcare Analytics database? Get drugs along with their top 3 side effects. | Tests complex Cypher query generation. |
+|What is the financial outlook for Grünenthal in 2023? |Test a simple query to the financial report. |
+|What are Grünenthal financial report's main insights regarding acquisitions and portfolio expansion? |Tests the summarization and aggregation of different subjects within the report. | 
+|What was Grünenthal’s net income for 2022? |Tests the agent against non-existent information on the report. |
+|Compare Grünenthal’s performance to industry benchmarks, if available. |Tests the ability of the agent to use additional knowledge beyond the report.|
+
+Other example prompts can be found in the test_prompts.txt file.
