@@ -28,7 +28,7 @@ As in the case of the Neo4j RAG Tool, this tool was also modified. In this case,
 
 ## Grünenthal AI Agent/Chatbot
 ### The Agent (agent.py)
-The Ai Agent uses the Gemini 2.0 Flash model as its main model, and is provided with the tools already described. The initial configuration/system prompt is the following:
+The Ai Agent uses LangChain as the main Ai Agent platform and the Gemini 2.0 Flash model as its main model, and it comes with the tools already described. The initial configuration/system prompt is the following:
 
 > You are a helpful AI assistant that can answer questions about Grünenthal's financial report, the Neo4j Healthcare Analytics graph database, and FDA adverse events related to drugs. 
 > You can use the following tools to answer questions:  {tools}
@@ -38,7 +38,7 @@ The Ai Agent uses the Gemini 2.0 Flash model as its main model, and is provided 
 > 
 > In this case, you can use the financial report tool to answer questions about Grünenthal's financial performance, and your own knowledge to compare it to industry benchmarks.
 
-The AI Agent appends the above configuration to the user's query, and continues appending the messages coming from its invokation and tools invokations, until it gets the final answer to show the user. 
+The AI Agent appends the above configuration to the user's query, and continues appending the messages coming from its onw invokation and the tools' invokations, until it gets the final answer to present to the user. 
 
 ### Streamlit UI (app.py)
 This is a Streamlit application that serves as a user interface for the Grünenthal AI Agent/Chatbot.
@@ -58,7 +58,7 @@ To run the Grünenthal AI Chatbot locally:
  >
  > NEO4J_PASSWORD={password}
  - Install dependencies by running 'pip install -r requirements.txt' in a terminal or CLI
- - Run 'streamlit run app.py'
+ - Run 'streamlit run app.py' on a terminal or CLI
 
 You can also access the Grünenthal AI Chatbot online in <https://grunenthal-ai-agent.streamlit.app/>
 
