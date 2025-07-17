@@ -14,7 +14,11 @@ user_input = st.chat_input("Ask a question...")
 if user_input:
     with st.spinner("Thinking..."):
         try:
-            result = asyncio.run(execute_agent(user_input))
+            try:
+                result = asyncio.run(execute_agent(user_input))
+            except Exception as e:
+                st.error(f"**System**: Error - {e}")
+                pass
         except RuntimeError:
             # Workaround for: "RuntimeError: There is no current event loop"
             loop = asyncio.new_event_loop()

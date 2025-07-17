@@ -9,7 +9,14 @@ import os
 loader = PyPDFLoader("data/grunenthal_report_23_24.pdf")
 docs = loader.load()
 
+'''
+This function performs RAG-based queries to the financial report PDF for Grünenthal for 2023. 
 
+ Args:
+    question (str): The question to be answered from the financial report.
+ Returns:
+    str: The answer to the question based on the financial report.
+'''
 def query_financial_report(question: str) -> str:
     
     chunks = RecursiveCharacterTextSplitter(chunk_size=1000, chunk_overlap=100).split_documents(docs)
