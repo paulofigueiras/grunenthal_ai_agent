@@ -50,9 +50,12 @@ It maintains a session state to keep track of the conversation history, allowing
 To run the Grünenthal AI Chatbot locally:
  - Clone the repo
  - create a .env file with the following parameters:
- > GOOGLE_API_KEY={Google Cloud API key}
+ > GOOGLE_API_KEY={Google Cloud API key} \n
+ >
  > NEO4J_URI=bolt://{host}:7687
+ >
  > NEO4J_USER=neo4j
+ >
  > NEO4J_PASSWORD={password}
  - Install dependencies by running 'pip install -r requirements.txt' in a terminal or CLI
  - Run 'streamlit run app.py'
