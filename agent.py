@@ -34,7 +34,7 @@ tools = [financial_rag_tool, neo4j_tool, fda_tool]
 AI_AGENT_TEMPLATE = '''
 You are a helpful AI assistant that can answer questions about Grünenthal's financial report, the Neo4j Healthcare Analytics graph database, and FDA adverse events related to drugs. 
 You should use the following tools to answer questions:  {tools}
-Nevertheless, you can also use your own knowledge if you cannot get enough information from the tools.
+You can use your own knowledge if you cannot get enough information from the tools.
 
 Example query: Compare Grünenthal’s performance to industry benchmarks, if available.
 
@@ -60,6 +60,7 @@ Returns:
 '''
 async def execute_agent(query: str) -> str:
     messages = [SystemMessage(AI_AGENT_TEMPLATE), HumanMessage(query)]
+
     ai_msg = llm_with_tools.invoke(messages)
 
     messages.append(ai_msg)
